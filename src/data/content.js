@@ -1,10 +1,3 @@
-// ─────────────────────────────────────────────────────────────
-// ALL THE WORDS AND PHOTOS FOR THE SITE LIVE HERE.
-// Change text between the quotes, swap photo imports, and the
-// whole site updates. You should not need to touch any other
-// file just to edit content.
-// ─────────────────────────────────────────────────────────────
-
 import m01 from "../assets/photos/memory-01.jpg";
 import m02 from "../assets/photos/memory-02.jpg";
 import m03 from "../assets/photos/memory-03.jpg";
@@ -15,9 +8,7 @@ import m07 from "../assets/photos/memory-07.jpg";
 import m08 from "../assets/photos/memory-08.jpg";
 import m09 from "../assets/photos/memory-09.jpg";
 import m10 from "../assets/photos/memory-10.jpg";
-import m11 from "../assets/photos/memory-11.jpg"; // the illustrated one
-import artTemple from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_13_46 PM.png";
-import artKite from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_19_16 PM.png";
+import m11 from "../assets/photos/memory-11.jpg";
 import artStation from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_21_28 PM.png";
 import artFood from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_24_44 PM.png";
 import artCamera from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_27_05 PM.png";
@@ -25,13 +16,12 @@ import artBalcony from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_41_29 PM
 import artCare from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_43_41 PM.png";
 import artPopcorn from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_45_34 PM.png";
 import artPlayful from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_49_44 PM.png";
-import artPark from "../assets/photos/Happy couple in a sunny park.png";
-import artField from "../assets/photos/Playful moment in the field.png";
 
 export const cover = {
+  eyebrow: "A little something for Sheral / Sherkhan / Sheru",
   title: "Sherkhan nu Scrapbook",
   subtitle: "Rakhi card nathi. Aakhi vaat che.",
-  hint: "open karje jyare ghar thodu miss thay",
+  hint: "open karje jyare mane thodu miss kare... ke hu tane.",
   scrollCta: "thread kheench ↓",
 };
 
@@ -40,145 +30,157 @@ export const chapters = [
     id: "not-by-blood",
     tab: "01",
     tabLabel: "Blood Thi Nahi",
-    title: "Saggi Ben Nathi",
-    kicker: "pan aa vaat kyarey matter j nathi kari",
+    title: "Saggi Ben Nathi. So What?",
+    kicker: "paper par nahi. Mara mate? Hamesha thi haan.",
     body: [
-      `Gujarati ma ek phrase che — saggi ben. Own sister. Same blood, same ghar, same badhu. Pan tu mari saggi ben nathi. Paper par toh bilkul nahi.`,
-      `Pan honestly, aa difference kyare feel j nathi thayo. Tare mari ben banva mate koi rule, koi relation, koi explanation joiye j nahi. Tu bas hati. Every single time.`,
-      `Etle rides, Rakhi ane badhi memories pehla aa clear kari dau: apdu relation blood thi nathi. Choice thi che. Mari pan, tari pan.`,
+      `Tu mari cousin sister che. Aa fact che. Pan apdu relation aa fact karta ghanu motu che. Tare mari "saggi ben" banva mate same surname, same ghar ke same blood ni jarur kyarey padi j nathi.`,
+      `Tu evi rite life ma hati ke aa difference notice karvanu j bandh thai gayu. Apde fight kariye, ek bija ne irritate kariye, random bakbak kariye, ane pachhi same divase evu normal thai jaiye jaane kai thayu j nathi.`,
+      `Etle aa website ni first line j aa: cousin che — pan feeling ma? Tu mari actual nani ben j che.`,
     ],
-    photo: {
-      src: m11,
-      caption:
-        "apdi ek photo je enough time sudhi still hati ke draw thai shake",
-      rotate: -3,
-    },
+    photo: { src: m11, caption: "aa photo ne words ni jarur thodi che?", rotate: -3 },
   },
   {
     id: "growing-up",
     tab: "02",
     tabLabel: "Tu Moti Thai",
-    title: "Tane Moti Thai Jota",
-    kicker: "aa vaat hu tane enough kehato j nathi",
+    title: "Sheru, Tu Moti Thai Gai",
+    kicker: "ane hu aa badhu side thi joyu che.",
     body: [
-      `Big brother hovano ek alag j pride hoy che. Ek time tu evi nani hati ke tara par nazar rakhvi padti, ane have tu tari own opinions, tari own plans ane tari own life build kari rahi che. Hu aa badhu close-up joyu che.`,
-      `Door thi nahi — ekdum front row ma. Kai stupid vaat par apdi argument, ena karta pan stupid vaat par apdu hasvu, ane vachche vachche tane aa person banta jovu.`,
-      `Etle haan, hu tane enough kehato nathi: I am genuinely proud of you. Quietly, constantly. Hamesha.`,
+      `Ek time tu nani hati. Have tu 17-18 ni thai ne tari own vibe, own opinions, own mood, own world sathe ubhi che. Genuinely funny part e che ke tu moti thai gai, pan mara mate tari sathe ni "nani ben" wali feeling kyare change thai j nahi.`,
+      `Hu tane hamesha advice aapto rahu chu — puchyu hoy ke na puchyu hoy. Sometimes useful. Sometimes completely unnecessary. Pan reason simple che: I care.`,
+      `Ane haan, tane joi ne proud feel thay che. Aa vaat hu normal conversation ma bolto nathi, etle website par lakhvi padi.`,
     ],
-    photo: {
-      src: m02,
-      caption: "apde apda j style ma, koi joi pan nathi rahyu",
-      rotate: 2,
-    },
+    photo: { src: m10, caption: "Sheru being Sheru. bas.", rotate: 2 },
   },
   {
     id: "the-distance",
     tab: "03",
-    tabLabel: "Vachche Nu Distance",
-    title: "Surat ↔ Ahmedabad",
-    kicker: "map karta apde ghana closer chhiye",
+    tabLabel: "Surat ↔ Ahmedabad",
+    title: "Vachche Bas Thoda Hours",
+    kicker: "pan miss karvama distance nu math nathi chaltu.",
     body: [
-      `Paper par Surat thi Ahmedabad etlu door nathi. Bus, few hours, bas pachi mali gaya. Pan actual ma je gap che ne — "jaldi avish" ane kharekhar tya pahochva vachche na divaso — ema hu tane ghanu miss karu chu. Kahi pan nathi bolto, pan karu chu.`,
-      `Ahmedabad pahochu tyare same feeling aave: jaane aakhi ride ma je weight lai ne avyo hato e finally muki didhu. Ane pachha avta? Same weight, reverse ma.`,
-      `Aa page e badha vachche na divaso mate che. No visit, no photo, kai special pan nahi — bas distance, ane tu mind ma.`,
+      `Surat ane Ahmedabad vachche map par few hours che. Bas. Pan kai kai divas e few hours ghana mota lage che. Especially jyare aas-paas koi potani sister sathe hoy ane mane tari yaad aave.`,
+      `Hu aa vaat bahu bolto nathi. Pan I miss you. Properly. Not because something is wrong — simply because tu ahiyan nathi.`,
+      `Pachhi jyare maliye ne, koi grand plan joiye j nahi. Ek ride, random bakbak, kai khavanu, ane bas. Jaane vachche na badha divaso ekdam side ma muki didha.`,
     ],
-    photo: {
-      src: m01,
-      caption: "horizon alag, cities alag, pan apde same",
-      rotate: -2,
-    },
+    photo: { src: m01, caption: "city alag. feeling same.", rotate: -2 },
   },
   {
     id: "our-usual",
     tab: "04",
     tabLabel: "Apdu Usual",
-    title: "Activa Rides & Endless Bakbak",
-    kicker: "plan kyarey banavyo nahi, bas thai jaye che",
+    title: "Activa, Bakbak & 'Kya Javu?'",
+    kicker: "answer usually: khabar nathi. chalo.",
     body: [
-      `Hu Ahmedabad ma hou etle script same: Activa bahar, koi specific destination nahi, je snack saras lage tya stop, ane joiye toh joiye — tran kalak gayab. Talking about everything, nothing, ane vachche random bakwas.`,
-      `Mara life ni half best conversations e bike par thai che. Tari city ma circles ma farta, koi jagyae time par pahochvani tension vagar.`,
-      `Bija loko hangout plan kare. Apde bas bike par besi jaiye. Bas aa j plan che. Ane sach kahu? Enough che.`,
+      `Apda best plans mostly plans hoy j nahi. Activa nikle, koi fixed destination nathi, vachche kai snack saras lage to stop, ane talking... literally anything.`,
+      `Mane aa ordinary moments bahu game che. Karan ke apde kai prove nathi karta, kai special banavta nathi. Bas apde hoye.`,
+      `Ane honestly, mari favourite memories ma ghani vaar aa j normal bakbak hoy che. Koi big event nahi. Bas tu side ma.`,
     ],
-    photo: { src: m07, caption: "vachche conversation, as always", rotate: 3 },
-    photo2: {
-      src: m04,
-      caption: "nowhere ane everywhere ni vachche kyank",
-      rotate: -4,
-    },
+    photo: { src: m07, caption: "apdu usual > koi fancy plan", rotate: 3 },
+    photo2: { src: m04, caption: "kya jata hata? important nathi.", rotate: -4 },
   },
   {
-    id: "that-day",
+    id: "the-distance-in-a-photo",
     tab: "05",
     tabLabel: "E Divas",
-    title: "E Divas",
-    kicker: "e divas aaje pan yaad aave che",
+    title: "E Divas Hu Nahi Bhulu",
+    kicker: "because you showed me what 'apdu' actually means.",
     body: [
-      `Tane khabar che hu kaya divas ni vaat karu chu. Ride, accident, ane e das seconds — badhu ulatu thai gayu, samaj pade ena pehla j.`,
-      `Pan pachhi je thayu e hu kyarey bhuli nahi shaku. Ghar par badha questions, koi ne blame karvani tayari, ane te sentence complete pan na thava didhu: "Moksh ni bhool nathi. Apde banne tya hata. Aa banne sathe thayu che."`,
-      `Tare aa kehvu jaruri pan nathu. Pan te ek second pan vicharya vagar kahi didhu, because that's who you are with people you trust. Aa vaat hu kyarey nahi bhulu.`,
+      `Tane khabar che kaya divas ni vaat che. Ride, accident, ane e thoda seconds — badhu ekdum fast thayu.`,
+      `Pan mane je vaat sauthi vadhu yaad rahi, e accident karta pan pachhini che. Ghar par questions hata, blame thai shake evo moment hato, ane te ek second vicharya vagar apdi vaat ne "mari bhool / tari bhool" banva didhi j nahi.`,
+      `Tu bas etlu kehine ubhi rahi ke apde banne tya hata. Apda banne sathe thayu. Bas. E moment ma mane samjayu ke aa bond mara mate ketlo real che. Aa memory hu lifetime carry karish.`,
     ],
-    photo: {
-      src: m06,
-      caption: "e divas pehla — ane pachhi pan, apde same",
-      rotate: -1,
-    },
+    photo: { src: m06, caption: "some moments stay, even when photos don't show them.", rotate: -1 },
   },
   {
-    id: "the-threat",
+    id: "sherkhan-files",
     tab: "06",
-    tabLabel: "Dhamki Vali Vaat",
-    title: `"Have Pachhal Nahi Besu"`,
-    kicker: "darek vaar kahe che. beshe pan darek vaar.",
+    tabLabel: "Sherkhan Files",
+    title: "Height Nani. Attitude Full Size.",
+    kicker: "official Sherkhan report: 100% pure Gen-Z.",
     body: [
-      `Darek ride pehla ek moment aave: tu pachhal besati hoy ane bolti hoy, "Bas aa last che. Have tari driving par trust nathi." Voice full serious. Pan banne ne khabar che ke drama che.`,
-      `Aa warning nathi. Apdo running joke che. Ane joke etle chale che because andar thi trust kyarey gayu j nathi.`,
-      `Tu pachhal bese che. Darek vaar. Vadhare answer joiye pan nahi.`,
+      `Tari height par majaak karvani mari permanent duty che. Tu nani che — fact. Pan funny part e che ke attitude, opinions ane arguments ma tu bilkul pocket-size nathi.`,
+      `Tu clumsy pan che, "eu" type things thi full uncomfortable pan thai jai, ane mood pramane tari duniya ma shu favourite che e pan change thai shake. Basically, tu predictable nathi.`,
+      `Pan aa badha quirks sathe j tu tu che. Etle change karvani koi request nathi. Bas height thodi vadhari de. Baaki approved.`,
     ],
-    photo: {
-      src: m03,
-      caption: "boli ne pan pachhal besi jaye che",
-      rotate: 2,
-    },
+    photo: { src: m03, caption: "height: smol. presence: bilkul nahi.", rotate: 2 },
   },
   {
     id: "big-brother",
     tab: "07",
-    tabLabel: "Mota Bhai",
-    title: "Tane Nahi JoiTu E Advice",
-    kicker: "mota bhaage sambhalyu pan che",
+    tabLabel: "Mota Bhai Ni Job",
+    title: "Advice. Teasing. Permanent Position.",
+    kicker: "job description: bhai rehvu. bas.",
     body: [
-      `Thodu tu puchhe che. Baki nu toh hu j aapi dau chu — because ek divas me decide kari lidhu ke tu mari responsibility che. Koi e job assign kari nathi. Hu pote lai lidhi.`,
-      `Next shu, shu worth che, shu nathi — aa badha topics par hu mara opinions ketli vaar aapi chukyo chu e apde count pan nahi kari shakiye. Hu better chu etle nahi. I just care enough to bolu.`,
-      `Ane pachhi tu ema thi kai actually follow kare, grow kare — e joi ne je proud feel thay che ne, ena mate mara pase perfect word nathi.`,
+      `Tu mane ghani vaar kahe che — "GF banai le, mane bhabhi joiye." Ane hu andar thi: please aa project bandh kar. 😂`,
+      `Pachhi biji vaar tu mara aas-paas na other sisters / people ni vaat lai ne mane chhede che. Ane aa ek vaat hu properly kahi dau: tari jagya compare karvani nathi. Tare je place mari life ma che ne, eni aju-baju koi competition j nathi.`,
+      `Bija badha relations potani jagyae. Pan Sheral = Sheral. Sherkhan = Sherkhan. Sheru = Sheru. Aa slot duplicate thato nathi.`,
+      `Etle hu advice aapto rahish, tane irritate karto rahish, tari height par majaak karto rahish, ane tu mari GF/Bhabhi wali inquiry chalavti rahish. Fair deal.`,
     ],
-    photo: {
-      src: m10,
-      caption: "jevi tu banvani hati, exactly evi",
-      rotate: -3,
-    },
+    photo: { src: m08, caption: "mota bhai ni job: lifetime. resignation not accepted.", rotate: -3 },
   },
 ];
 
-export const finale = {
+export const quiz = {
   tab: "08",
+  tabLabel: "Sherkhan Test",
+  title: "Quick Sherkhan Audit",
+  kicker: "jo aa badhu vanchi ne pan tame mane nahi samjho toh shu faydo? 😂",
+  questions: [
+    {
+      question: "Sheral mane shu kehva ma expert che?",
+      options: ["Gym join kar", "GF banai le, mane bhabhi joiye", "Time par sui ja", "Coding bandh kar"],
+      answer: 1,
+    },
+    {
+      question: "Apda hangout no most accurate plan shu che?",
+      options: ["Full itinerary", "Movie tickets", "Activa + 'kya javu?'", "5 AM trek"],
+      answer: 2,
+    },
+    {
+      question: "Sherkhan ni biggest weakness?",
+      options: ["Height jokes", "Too much sleep", "No opinions", "Being boring"],
+      answer: 0,
+    },
+    {
+      question: "Surat ↔ Ahmedabad vachche shu che?",
+      options: ["Bas thoda hours", "Ek lifetime", "No connection", "A huge wall"],
+      answer: 0,
+    },
+  ],
+  result: {
+    perfect: "Certified Sherkhan. Tamne officially mara taraf thi lifetime access mali gayu. 🐯",
+    close: "Almost perfect. Pan Sherkhan ne samajvanu kaam lifetime nu che. 😂",
+    chaotic: "Marks karta bond important che. Aapde banne ne aa already khabar che.",
+  },
+};
+
+export const finale = {
+  tab: "09",
   tabLabel: "Rakhi Vali Vaat",
   title: "To Aa Rakhi —",
   intro: [
-    `Darek varse tu mara wrist par thread bandhe che, hu tane kai aapu chu, ane apde kahiye ke barabar thai gayu. Pan honestly? Kyarey barabar nathi thayu. Close pan nahi.`,
-    `Etle aa varse thread pehla aa. Upar na badha pages, badhi vaat — aa actual gift che. Website toh bas e jagya che jya hu aakhir badhu lakhine kahi shakyo.`,
+    `Darek varse Rakhi aave che. Thread bandhay, wish thay, photo pade. Nice. Pan mara mate aa thread ek reminder che ke apde already je che ene koi ceremony create karti nathi — bas thodu visible banave che.`,
+    `Etle aa varse gift ma kai expensive nathi. Aa badha pages che. Mara words che. Ane je vaat hu face-to-face ma probably awkward thai ne properly na kahi shaku, e ahi muki che.`,
   ],
   letterTitle: "one more thing, Sherkhan —",
-  letter: `Saggi ben nathi. E banvani jarur pan kyarey nathi padi. Tu mara mate tyarthi show up karti aavi che jyare apde banne pase aa relation mate words pan n hata — ane hu pan mari rite tari sathe ubho rehva try karto avyo chu. Rides, fights, e divas, badhu — apdu kai pan hu trade nahi karu.
+  letter: `Tu mari cousin sister che — aa hu kyare deny nathi karto. Pan mari life ma tari place explain karva mate "cousin" word ekdum nani definition che.
 
-Mane lage che aa j apda brother-sister relation ne real banave che. Apde badhi vaat ma agree kariye evu bilkul nathi. Actually, almost never. Pan argument kyarey story no end nathi banto. Tu mara thi irritate thai shake, mari driving ne worst kahi shake, promise kari shake ke have kyarey pachhal nahi bese — ane thodi vaar pachhi apde snacks leta ane badhi random vaat karta hoye.
+Tu mari nani ben jevi che. Etle j tane irritate karvu easy lage che. Height par majaak karu chu. Advice aapu chu. Tane puchyu hoy ke na puchyu hoy, banne case ma mara opinions ready hoy che. Ane haan, tu pan kai ochhi nathi — GF banai le, mane bhabhi joiye wali line thi lai ne mari badhi personal decisions par commentary sudhi, badhu chalu rahe che.
 
-Distance pan have apda relation no part bani gayu che. Surat ane Ahmedabad few hours j che, pan kai vaar e few hours ek alag life jeva lage. Pachhi hu tane mali jau, apde Activa par besi jaiye, ane normal feel thata ek minute pan nathi lagto. Jaane gap khali map par j hato.
+Pan aa badha jokes ni niche ek simple vaat che: I love you, Sheru. And I miss you. Ghanu.
 
-E divas aaje pan mane yaad aave che. Accident na dar mate j nahi, pan ena pachhi te je karyu ena mate. Te koi ne blame karva nathi didhu. Koi ne aa mari mistake ke tari mistake banava nathi didhu. Te bas kahyu ke apde banne tya hata, apda banne sathe thayu, bas. E vaat hu tyarthi sathe lai ne faru chu. I hope tane khabar che ke e mara mate ketli important hati.
+Ahmedabad ane Surat vachche na hours mane tyare vadhu feel thay che jyare hu koi ne eni sister sathe jovu. Koi special reason nathi hotu. Bas ek second mate lage ke tu ahi hot toh saru. Pachhi koi photo joi lau, apdi koi old bakbak yaad aave, ane samjai jai ke aa distance permanent nathi — apdu bond pan koi distance thi nanu nathi thatu.
 
-Etle hu tari permission vagar advice aapu, vadhare worry karu, athva looking out for you ne full-time job ni jem lau — toh aa reason che. Vachche kyank tu mari care karvani person bani gayi. Koi ceremony nahi, koi rule nahi, koi paper nahi joiye.
+Ane ek vaat specially: jo hu kyarek bija sisters, friends ke koi pan relation ni vaat karu, toh please ek thing yaad rakhje. Tari jagya compare karvani nathi. Tare mari life ma je place own kari che ne, eni aju-baju koi avi pan shake nahi. Tu competition nathi. Tu category j alag che. Sheral is Sheral.
 
-Happy Rakhi, Sherkhan. Haju ghani rides, ghana snacks, jaldi pati jata arguments, tari unwanted advice par mara comments, ane ghana varso sudhi apde exactly aava j rahiye — ena naam.
+E divas je banyu e hu hamesha yaad rakhish — because you stood with me without making it about blame. Apde banne tya hata. Apda banne sathe thayu. Bas. Aa sentence mara mate ek moti vaat bani ne rahi gayi.
+
+So yes, hu tane protect karish, advice aapish, irritate karish, miss karish, ane possible hoy tya sudhi tari sathe random Activa rides karish. Tu pachhal besi ne "have pachhal nahi besu" pan kehje. Banne ne khabar che ke next time pan beshish. 😂
+
+Happy Rakhi, Sherkhan.
+
+Aaje thi ghana varso pachhi pan jo aa page kholish ne, toh ek vaat yaad aavvi joiye: somewhere in Surat, there was one mota bhai who genuinely, ridiculously, permanently loved his Sheru.
 
 — your brother, always`,
   wishButtonIdle: "tie the rakhi",
@@ -186,30 +188,6 @@ Happy Rakhi, Sherkhan. Haju ghani rides, ghana snacks, jaldi pati jata arguments
   signOff: "— Moksh",
 };
 
-export const allPhotos = {
-  m01,
-  m02,
-  m03,
-  m04,
-  m05,
-  m06,
-  m07,
-  m08,
-  m09,
-  m10,
-  m11,
-};
+export const allPhotos = { m01, m02, m03, m04, m05, m06, m07, m08, m09, m10, m11 };
 
-export const illustratedMemories = {
-  artTemple,
-  artKite,
-  artStation,
-  artFood,
-  artCamera,
-  artBalcony,
-  artCare,
-  artPopcorn,
-  artPlayful,
-  artPark,
-  artField,
-};
+export const illustratedMemories = { artStation, artFood, artCamera, artBalcony, artCare, artPopcorn, artPlayful };

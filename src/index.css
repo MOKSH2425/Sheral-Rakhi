@@ -2,93 +2,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --grain-opacity: 0.06;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background-color: #8C6B42;
-  color: #3B2E22;
-  font-family: 'Work Sans', sans-serif;
-  overflow-x: hidden;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Paper grain texture overlay */
-.paper-grain {
-  position: relative;
-}
-.paper-grain::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-  opacity: var(--grain-opacity);
-  mix-blend-mode: multiply;
-  z-index: 1;
-}
-
-/* Torn paper edge, top */
-.torn-top {
-  clip-path: polygon(
-    0% 3%, 3% 0%, 7% 2%, 12% 0%, 17% 3%, 22% 0.5%, 28% 2.5%, 33% 0%,
-    39% 2%, 44% 0%, 50% 2.5%, 56% 0.5%, 61% 3%, 67% 0%, 72% 2%, 78% 0%,
-    83% 2.5%, 89% 0.5%, 94% 2%, 100% 0%,
-    100% 100%, 0% 100%
-  );
-}
-
-/* Torn paper edge, bottom */
-.torn-bottom {
-  clip-path: polygon(
-    0% 0%, 100% 0%,
-    100% 97%, 94% 100%, 89% 97.5%, 83% 99.5%, 78% 97%, 72% 100%,
-    67% 97.5%, 61% 99.5%, 56% 97%, 50% 100%, 44% 97.5%, 39% 99.5%,
-    33% 97%, 28% 100%, 22% 97.5%, 17% 99.5%, 12% 97%, 7% 100%, 3% 97.5%, 0% 100%
-  );
-}
-
-.washi {
-  position: absolute;
-  height: 26px;
-  width: 90px;
-  opacity: 0.85;
-  box-shadow: 0 1px 2px rgba(59,46,34,0.25);
-}
-
-.stitch-border {
-  border: 2px dashed rgba(59,46,34,0.35);
-}
-
-.font-display { font-family: 'Fraunces', serif; }
-.font-hand { font-family: 'Caveat', cursive; }
-.font-type { font-family: 'Special Elite', monospace; }
-
-/* Polaroid tilt utility variants applied via inline style transform */
-.polaroid {
-  background: #FAF5E9;
-  padding: 12px 12px 42px 12px;
-  box-shadow: 0 2px 4px rgba(59,46,34,0.15), 0 10px 20px rgba(59,46,34,0.25);
-}
-
-.scrollbar-hide::-webkit-scrollbar { display: none; }
-.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+:root { --grain-opacity: 0.055; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #8C6B42; color: #3B2E22; font-family: 'Work Sans', sans-serif; overflow-x: hidden; }
+button { -webkit-tap-highlight-color: transparent; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+.paper-grain { position: relative; }
+.paper-grain::before { content:""; position:absolute; inset:0; pointer-events:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E"); opacity:var(--grain-opacity); mix-blend-mode:multiply; z-index:1; }
+.torn-top { clip-path:polygon(0% 3%,3% 0%,7% 2%,12% 0%,17% 3%,22% .5%,28% 2.5%,33% 0%,39% 2%,44% 0%,50% 2.5%,56% .5%,61% 3%,67% 0%,72% 2%,78% 0%,83% 2.5%,89% .5%,94% 2%,100% 0%,100% 100%,0% 100%); }
+.torn-bottom { clip-path:polygon(0% 0%,100% 0%,100% 97%,94% 100%,89% 97.5%,83% 99.5%,78% 97%,72% 100%,67% 97.5%,61% 99.5%,56% 97%,50% 100%,44% 97.5%,39% 99.5%,33% 97%,28% 100%,22% 97.5%,17% 99.5%,12% 97%,7% 100%,3% 97.5%,0% 100%); }
+.washi { position:absolute; height:26px; width:90px; opacity:.85; box-shadow:0 1px 2px rgba(59,46,34,.25); }
+.stitch-border { border:2px dashed rgba(59,46,34,.35); }
+.font-display { font-family:'Fraunces',serif; }
+.font-hand { font-family:'Caveat',cursive; }
+.font-type { font-family:'Special Elite',monospace; }
+.polaroid { background:#FAF5E9; padding:12px 12px 42px; box-shadow:0 2px 4px rgba(59,46,34,.15),0 10px 20px rgba(59,46,34,.25); }
+.scrollbar-hide::-webkit-scrollbar{display:none}.scrollbar-hide{-ms-overflow-style:none;scrollbar-width:none}
+::selection { background:#C89B3C; color:#3B2E22; }
