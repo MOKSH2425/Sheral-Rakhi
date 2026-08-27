@@ -3,57 +3,59 @@ import { allPhotos, illustratedMemories } from "../data/content";
 import Polaroid from "./Polaroid";
 
 const memories = [
-  [allPhotos.m02, "night-time Sheru. no explanation required.", -4, "sm"],
-  [allPhotos.m03, "the height joke has entered the archive.", 3, "md"],
-  [allPhotos.m04, "kya jata hata? apde jata hata. enough.", -2, "sm"],
-  [allPhotos.m05, "normal day, permanently saved.", 4, "md"],
-  [allPhotos.m06, "one of those photos that just feels like us.", -3, "sm"],
-  [allPhotos.m07, "apdu usual, again.", 2, "md"],
-  [allPhotos.m08, "proof that random days become memories.", -3, "sm"],
-  [allPhotos.m09, "camera kholi = photo toh joiye.", 3, "md"],
-  [allPhotos.m10, "Sheru being completely herself.", -2, "sm"],
-  [allPhotos.m01, "different place, same people.", 2, "md"],
-  [allPhotos.m11, "and somehow one drawing says the whole thing.", -1, "sm"],
+  { src: allPhotos.m08, caption: "normal divas pan keep karva jevo", rotate: -4, size: "sm" },
+  { src: allPhotos.m05, caption: "evu happiness jene explanation joiye nahi", rotate: 3, size: "md" },
+  { src: allPhotos.m09, caption: "photo toh levano j hoy", rotate: -2, size: "sm" },
+  { src: allPhotos.m04, caption: "apdu usual, apda j style ma", rotate: 4, size: "md" },
+  { src: allPhotos.m07, caption: "random ride. zero plan. full memory.", rotate: -3, size: "sm" },
+  { src: allPhotos.m03, caption: "‘last ride’ — allegedly.", rotate: 2, size: "md" },
+  { src: allPhotos.m10, caption: "Mota Bhai ni post: permanent", rotate: -2, size: "sm" },
+  { src: allPhotos.m02, caption: "same Sheru, different day", rotate: 3, size: "md" },
 ];
 
-const imagined = [
-  [illustratedMemories.artStation, "future rides we haven't planned yet.", -3, "sm"],
-  [illustratedMemories.artFood, "first snacks. baki badhu pachhi.", 2, "md"],
-  [illustratedMemories.artCamera, "someone please remember to take the photo.", -2, "sm"],
-  [illustratedMemories.artBalcony, "quiet moments count too.", 4, "md"],
-  [illustratedMemories.artCare, "the care underneath all the bakbak.", -4, "sm"],
-  [illustratedMemories.artPopcorn, "argument today, laugh tomorrow.", 3, "md"],
-  [illustratedMemories.artPlayful, "still this annoying, hopefully forever.", -2, "sm"],
+const imaginedMemories = [
+  { src: illustratedMemories.artStation, caption: "aava scenes haju ghana baki che", rotate: -3, size: "sm" },
+  { src: illustratedMemories.artFood, caption: "pehla snacks. baki badhu pachhi.", rotate: 2, size: "md" },
+  { src: illustratedMemories.artCamera, caption: "photo levanu koi toh yaad rakhe che", rotate: -2, size: "sm" },
+  { src: illustratedMemories.artCare, caption: "care — mostly hidden, still there", rotate: 4, size: "md" },
 ];
 
 export default function MemoryWall() {
-  return <section id="memory-wall" className="relative w-full overflow-hidden bg-paper-warm paper-grain py-24 sm:py-32 px-6 sm:px-16">
-    <div className="relative z-10 mx-auto max-w-6xl">
-      <motion.div className="mx-auto mb-14 max-w-2xl text-center" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }}>
-        <p className="font-type text-rust text-xs tracking-[0.25em] uppercase">the photo wall</p>
-        <h2 className="font-display text-ink text-5xl sm:text-7xl font-semibold mt-2">Proof We Were Here.</h2>
-        <p className="font-hand text-rust text-2xl mt-3">11 photos. zero normal captions.</p>
-      </motion.div>
+  return (
+    <section id="memory-wall" className="relative w-full overflow-hidden bg-paper-warm paper-grain py-24 sm:py-32 px-6 sm:px-16">
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <motion.div className="mx-auto mb-14 max-w-xl text-center" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.7 }}>
+          <p className="font-type text-rust text-xs tracking-[0.25em] uppercase">last page, pan full stop nathi</p>
+          <h2 className="font-display text-ink text-4xl sm:text-6xl font-semibold mt-2">Proof We Were There.</h2>
+          <p className="font-hand text-rust text-2xl mt-3">badhi important memories important dekhati nathi.</p>
+        </motion.div>
 
-      <div className="flex flex-wrap items-start justify-center gap-x-8 gap-y-14 sm:gap-x-12 sm:gap-y-20">
-        {memories.map(([src, caption, rotate, size], index) => <motion.div key={caption} initial={{ opacity: 0, y: 28, rotate: rotate - 3 }} whileInView={{ opacity: 1, y: 0, rotate }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.65, delay: index * 0.05 }}><Polaroid src={src} caption={caption} rotate={rotate} size={size} tapeIndex={index} /></motion.div>)}
+        <div className="flex flex-wrap items-start justify-center gap-x-8 gap-y-14 sm:gap-x-12 sm:gap-y-20">
+          {memories.map((memory, index) => (
+            <motion.div key={`${memory.caption}-${index}`} initial={{ opacity: 0, y: 28, rotate: memory.rotate - 3 }} whileInView={{ opacity: 1, y: 0, rotate: memory.rotate }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.65, delay: index * 0.06 }}>
+              <Polaroid src={memory.src} caption={memory.caption} rotate={memory.rotate} size={memory.size} tapeIndex={index + 1} />
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div className="mx-auto mt-24 max-w-2xl text-center" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.7 }}>
+          <p className="font-type text-xs uppercase tracking-[0.25em] text-rust">imagined, not pretending</p>
+          <h3 className="font-display mt-2 text-3xl font-semibold text-ink sm:text-5xl">Haju Ghani Pages Baki Che.</h3>
+          <p className="font-hand mt-3 text-2xl text-rust">aa illustrations future memories che, real photos ni jagyae nahi.</p>
+        </motion.div>
+
+        <div className="mt-12 flex flex-wrap items-start justify-center gap-x-8 gap-y-14 sm:gap-x-12 sm:gap-y-20">
+          {imaginedMemories.map((memory, index) => (
+            <motion.div key={memory.caption} initial={{ opacity: 0, y: 28, rotate: memory.rotate - 3 }} whileInView={{ opacity: 1, y: 0, rotate: memory.rotate }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.65, delay: index * 0.07 }}>
+              <Polaroid src={memory.src} caption={memory.caption} rotate={memory.rotate} size={memory.size} tapeIndex={index + 2} />
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-24 text-center">
+          <p className="font-hand text-3xl text-rust">same us. different page.</p>
+        </div>
       </div>
-
-      <motion.div className="mx-auto mt-24 max-w-3xl border-y border-rust/25 py-10 text-center" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.4 }}>
-        <p className="font-type text-[10px] uppercase tracking-[0.25em] text-rust">future pages</p>
-        <h3 className="font-display mt-2 text-4xl sm:text-5xl font-semibold text-ink">Aa Scrapbook Ahiya Purto Nathi.</h3>
-        <p className="font-hand mt-3 text-2xl text-rust">aagal na pages haju apde banavvana che.</p>
-      </motion.div>
-
-      <div className="mt-14 flex flex-wrap items-start justify-center gap-x-8 gap-y-14 sm:gap-x-12 sm:gap-y-20">
-        {imagined.map(([src, caption, rotate, size], index) => <motion.div key={caption} initial={{ opacity: 0, y: 28, rotate: rotate - 3 }} whileInView={{ opacity: 1, y: 0, rotate }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.65, delay: index * 0.05 }}><Polaroid src={src} caption={caption} rotate={rotate} size={size} tapeIndex={index + 3} /></motion.div>)}
-      </div>
-
-      <div className="mx-auto mt-24 max-w-2xl text-center">
-        <p className="font-display text-3xl sm:text-4xl text-ink">Same us. Different page.</p>
-        <p className="font-hand text-2xl text-rust mt-2">Happy Rakhi, Sheru 🐯</p>
-        <p className="font-type text-[9px] uppercase tracking-[0.22em] text-ink/35 mt-7">end of volume 01 · not the end of us</p>
-      </div>
-    </div>
-  </section>;
+    </section>
+  );
 }
