@@ -24,7 +24,7 @@ export default function Chapter({ chapter, index }) {
       id={chapter.id}
       data-tab={chapter.tab}
       data-label={chapter.tabLabel}
-      className={`relative w-full ${bg} paper-grain torn-top torn-bottom py-24 sm:py-32 px-6 sm:px-16 -mt-6`}
+      className={`perspective-section relative w-full ${bg} paper-grain torn-top torn-bottom py-24 sm:py-32 px-6 sm:px-16 -mt-6`}
     >
       {/* side page tab (desktop) */}
       <div className="hidden lg:flex absolute -right-1 top-16 items-center">
@@ -131,7 +131,7 @@ export default function Chapter({ chapter, index }) {
 
         {/* photo block */}
         <motion.div
-          className="flex-shrink-0 flex flex-wrap justify-center gap-8"
+          className="depth-stage flex-shrink-0 flex flex-wrap justify-center gap-8"
           style={{ y: shouldReduceMotion ? 0 : photoY }}
         >
           <Polaroid

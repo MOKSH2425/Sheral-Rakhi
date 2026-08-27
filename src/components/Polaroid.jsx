@@ -4,7 +4,13 @@ import { createPortal } from "react-dom";
 
 const TAPE_COLORS = ["#C97148", "#4F6D63", "#C89B3C"];
 
-export default function Polaroid({ src, caption, rotate = 0, size = "md", tapeIndex = 0 }) {
+export default function Polaroid({
+  src,
+  caption,
+  rotate = 0,
+  size = "md",
+  tapeIndex = 0,
+}) {
   const [flipped, setFlipped] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const tapeColor = TAPE_COLORS[tapeIndex % TAPE_COLORS.length];
@@ -34,12 +40,18 @@ export default function Polaroid({ src, caption, rotate = 0, size = "md", tapeIn
   return (
     <motion.div
       className={`group relative ${widths[size]} select-none cursor-pointer`}
-      style={{ rotate }}
+      style={{ rotate, transformPerspective: 900 }}
       initial={{ opacity: 0, y: 30, rotate: rotate - 4 }}
       whileInView={{ opacity: 1, y: 0, rotate }}
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      whileHover={{ scale: 1.03, rotate: 0, zIndex: 20 }}
+      whileHover={{
+        scale: 1.03,
+        rotate: 0,
+        rotateX: 2,
+        rotateY: -2,
+        zIndex: 20,
+      }}
     >
       {/* washi tape */}
       <div
@@ -54,10 +66,7 @@ export default function Polaroid({ src, caption, rotate = 0, size = "md", tapeIn
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
           {/* front */}
-          <div
-            className="polaroid"
-            style={{ backfaceVisibility: "hidden" }}
-          >
+          <div className="polaroid" style={{ backfaceVisibility: "hidden" }}>
             <img
               src={src}
               alt={caption}
@@ -69,7 +78,10 @@ export default function Polaroid({ src, caption, rotate = 0, size = "md", tapeIn
           {/* back */}
           <div
             className="polaroid absolute inset-0 flex items-center justify-center bg-paper-warm"
-            style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+            style={{
+              backfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
+            }}
           >
             <p className="font-hand text-ink text-2xl sm:text-3xl text-center px-4 leading-snug">
               {caption}
@@ -81,7 +93,9 @@ export default function Polaroid({ src, caption, rotate = 0, size = "md", tapeIn
         type="button"
         aria-label="Open photo full screen"
         className={`absolute right-4 top-4 z-[3] flex h-9 w-9 items-center justify-center rounded-full bg-ink/75 font-type text-xs text-paper transition-opacity hover:bg-ink focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-          flipped ? "pointer-events-none opacity-0" : "opacity-0 group-hover:opacity-100"
+          flipped
+            ? "pointer-events-none opacity-0"
+            : "opacity-0 group-hover:opacity-100"
         }`}
         onClick={(event) => {
           event.stopPropagation();

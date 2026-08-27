@@ -209,7 +209,8 @@ export default function Finale() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0, rotate: [-1, 0.5, -1] }}
               transition={{
-                duration: 0.9,
+                duration: 1.1,
+                delay: shouldReduceMotion ? 0 : 1.9,
                 rotate: { duration: 0.9, ease: "easeOut" },
               }}
               className="polaroid !bg-paper-warm text-left px-6 py-8 sm:px-10 sm:py-10 mx-auto max-w-xl mt-4"
@@ -235,9 +236,15 @@ export default function Finale() {
               animate={{ opacity: 1, y: 0 }}
               className="mt-16 border-t border-paper/20 pt-12"
             >
-              <p className="font-type text-paper/50 text-[10px] uppercase tracking-[0.25em]">one last thing</p>
-              <h3 className="font-display text-paper text-4xl sm:text-5xl font-semibold mt-2">Sheral is Sheral.</h3>
-              <p className="font-hand text-gold text-2xl mt-3">no comparison. no replacement. bas mari Sheru.</p>
+              <p className="font-type text-paper/50 text-[10px] uppercase tracking-[0.25em]">
+                one last thing
+              </p>
+              <h3 className="font-display text-paper text-4xl sm:text-5xl font-semibold mt-2">
+                Sheral is Sheral.
+              </h3>
+              <p className="font-hand text-gold text-2xl mt-3">
+                no comparison. no replacement. bas mari Sheru.
+              </p>
               <button
                 type="button"
                 onClick={() => setSecret((value) => !value)}
@@ -253,7 +260,9 @@ export default function Finale() {
                     exit={{ opacity: 0, scale: 0.97 }}
                     className="mx-auto mt-6 max-w-md border border-gold/30 bg-paper-warm text-left p-6 shadow-paper"
                   >
-                    <p className="font-type text-rust text-[10px] uppercase tracking-[0.2em]">TOP SECRET · SHERKHAN DOSSIER</p>
+                    <p className="font-type text-rust text-[10px] uppercase tracking-[0.2em]">
+                      TOP SECRET · SHERKHAN DOSSIER
+                    </p>
                     <div className="mt-4 space-y-2 font-type text-xs text-ink">
                       <p>HEIGHT — classified.</p>
                       <p>ATTITUDE — maximum.</p>
@@ -262,8 +271,12 @@ export default function Finale() {
                       <p>ANNOYING LEVEL — high.</p>
                       <p>SISTER LEVEL — ∞</p>
                     </div>
-                    <p className="font-display text-2xl font-semibold text-ink mt-5">Verdict: KEEP HER.</p>
-                    <p className="font-hand text-rust text-xl mt-1">Lifetime validity. No returns. No exchanges.</p>
+                    <p className="font-display text-2xl font-semibold text-ink mt-5">
+                      Verdict: KEEP HER.
+                    </p>
+                    <p className="font-hand text-rust text-xl mt-1">
+                      Lifetime validity. No returns. No exchanges.
+                    </p>
                   </motion.div>
                 )}
               </AnimatePresence>

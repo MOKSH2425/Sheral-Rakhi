@@ -7,10 +7,13 @@ export default function Cover({ onEnter }) {
     <section className="relative min-h-[100svh] w-full flex flex-col items-center justify-center overflow-hidden bg-kraft-dark">
       {/* backdrop photo, dimmed */}
       <div className="absolute inset-0">
-        <img
+        <motion.img
           src={m04}
           alt=""
           className="w-full h-full object-cover"
+          initial={{ scale: 1.08 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2.4, ease: "easeOut" }}
           style={{
             filter: "sepia(0.45) saturate(0.7) brightness(0.55) contrast(1.05)",
           }}
@@ -30,6 +33,13 @@ export default function Cover({ onEnter }) {
         initial={{ scale: 1.08, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+      />
+      <motion.div
+        aria-hidden="true"
+        className="absolute bottom-0 left-1/2 h-24 w-px origin-bottom -translate-x-1/2 bg-gold/70"
+        initial={{ scaleY: 0, opacity: 0 }}
+        animate={{ scaleY: 1, opacity: 0.7 }}
+        transition={{ duration: 1.2, delay: 1, ease: "easeOut" }}
       />
 
       {/* stitched border frame */}
