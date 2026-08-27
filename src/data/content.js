@@ -9,17 +9,17 @@ import m08 from "../assets/photos/memory-08.jpg";
 import m09 from "../assets/photos/memory-09.jpg";
 import m10 from "../assets/photos/memory-10.jpg";
 import m11 from "../assets/photos/memory-11.jpg";
-import artTemple from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_13_46 PM.png";
-import artKite from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_19_16 PM.png";
-import artStation from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_21_28 PM.png";
-import artFood from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_24_44 PM.png";
-import artCamera from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_27_05 PM.png";
-import artBalcony from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_41_29 PM.png";
-import artCare from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_43_41 PM.png";
-import artPopcorn from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_45_34 PM.png";
-import artPlayful from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_49_44 PM.png";
-import artPark from "../assets/photos/Happy couple in a sunny park.png";
-import artField from "../assets/photos/Playful moment in the field.png";
+import artTemple from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_13_46 PM.webp";
+import artKite from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_19_16 PM.webp";
+import artStation from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_21_28 PM.webp";
+import artFood from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_24_44 PM.webp";
+import artCamera from "../assets/photos/ChatGPT Image Aug 24, 2026, 09_27_05 PM.webp";
+import artBalcony from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_41_29 PM.webp";
+import artCare from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_43_41 PM.webp";
+import artPopcorn from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_45_34 PM.webp";
+import artPlayful from "../assets/photos/ChatGPT Image Aug 24, 2026, 11_49_44 PM.webp";
+import artPark from "../assets/photos/Happy couple in a sunny park.webp";
+import artField from "../assets/photos/Playful moment in the field.webp";
 
 export const cover = {
   title: "Sherkhan nu Scrapbook",
@@ -40,7 +40,11 @@ export const chapters = [
       `Pan honestly, aa difference kyare feel j nathi thayo. Tare mari ben banva mate koi rule, koi explanation ke koi official stamp joiye j nathi. Tu bas mari sister che.`,
       `Etle jo koi puchhe ke “cousin sister mate aa badhu kem?” toh simple answer che — because Sheral is Sheral. Bas.`,
     ],
-    photo: { src: m11, caption: "aa relation explain karva karta aa photo better che", rotate: -3 },
+    photo: {
+      src: m11,
+      caption: "aa relation explain karva karta aa photo better che",
+      rotate: -3,
+    },
   },
   {
     id: "sherkhan-files",
@@ -54,7 +58,11 @@ export const chapters = [
       `File 003 — RANDOM BAKBAK. Koi topic nathi hoy toh pan apde kai rite kai ne kai vaat kari j laiye chhiye e aaje sudhi samajyu nathi.`,
       `Ane File 004 — OTHER SISTERS. Aa ma ek correction jaruri che: tari jagya mate koi competition nathi. Tari seat tari j che. Koi aju-baju pan aavi shake em nathi.`,
     ],
-    photo: { src: m08, caption: "small height, very large Sherkhan energy", rotate: 2 },
+    photo: {
+      src: m08,
+      caption: "small height, very large Sherkhan energy",
+      rotate: 2,
+    },
   },
   {
     id: "growing-up",
@@ -80,7 +88,11 @@ export const chapters = [
       `Apdi ghani best conversations koi fancy place par nathi thai. Bike par thai che. Random rides ma thai che. Kai plan vagar.`,
       `Bija loko hangout plan kare. Apde bas bike par besi jaiye. Bas aa j plan che. Ane sach kahu? Enough che.`,
     ],
-    photo: { src: m07, caption: "nowhere in particular. still worth remembering.", rotate: 3 },
+    photo: {
+      src: m07,
+      caption: "nowhere in particular. still worth remembering.",
+      rotate: 3,
+    },
     photo2: { src: m04, caption: "apdu usual, apda j style ma", rotate: -4 },
   },
   {
@@ -165,8 +177,30 @@ Happy Rakhi, Sherkhan.
   signOff: "— Moksh",
 };
 
-export const allPhotos = { m01, m02, m03, m04, m05, m06, m07, m08, m09, m10, m11 };
+export const allPhotos = {
+  m01,
+  m02,
+  m03,
+  m04,
+  m05,
+  m06,
+  m07,
+  m08,
+  m09,
+  m10,
+  m11,
+};
 
 export const illustratedMemories = {
-  artTemple, artKite, artStation, artFood, artCamera, artBalcony, artCare, artPopcorn, artPlayful, artPark, artField,
+  artTemple,
+  artKite,
+  artStation,
+  artFood,
+  artCamera,
+  artBalcony,
+  artCare,
+  artPopcorn,
+  artPlayful,
+  artPark,
+  artField,
 };
